@@ -1,0 +1,21 @@
+.first_name{
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.user-info-wrapper{
+    padding: 10px;
+    margin: 15px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px solid;
+}
+
+.right-section{
+    flex: 1;
+}
+
+.left-section{
+    flex: 1;
+
+}
