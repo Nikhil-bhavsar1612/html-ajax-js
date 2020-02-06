@@ -50,6 +50,20 @@
 .slick-slide-wrapper{
     width: 400px;
 }
+.search_wrapper{
+    position: relative;
+}
+
+.header_search{
+    position: absolute;
+    right: 0;
+    width: 30px;
+    height: 100%;
+
+}
+.search-field{
+    padding: 5px 20px 5px 5px;
+}
 
 
 @media(max-width:1080px){
