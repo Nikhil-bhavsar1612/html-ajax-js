@@ -54,11 +54,12 @@ xhr.onload = function(){
         $(".user-wrapper").append(
           "<div class='user-info-wrapper'>"+ 
           "<div class='left-section'>" + 
-            "<div class='first_name'>"+ dt.first_name+ "</div>"+
+          "<img src='https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg'>"+
+            
             
         "</div>"+
         "<div class='right-section'>"
-                +
+                +"<div class='first_name'>"+ dt.first_name+ "</div>"+
                 "<div>"+ dt.last_name+ "</div>"+
                 "<div>"+ dt.avatar+ "</div>"+
             "</div>"+
