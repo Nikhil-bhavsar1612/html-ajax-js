@@ -9,6 +9,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     border: 1px solid;
+    word-wrap: break-word;
 }
 
 .right-section{
@@ -19,3 +20,14 @@
     flex: 1;
 
 }
+.site_link{
+    display: inline-block;
+    word-break: break-word;
+}
+
+@media(max-width:1080px){
+    .right-section{
+        flex: 1 1 100%;
+    }
+}
+

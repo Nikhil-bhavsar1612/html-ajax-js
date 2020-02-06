@@ -30,7 +30,7 @@ xhr.onload = function(){
         "<td>"+dt.email+ "</td>"+
         "<td>"+dt.first_name+ "</td>"+
         "<td>"+dt.last_name+ "</td>"+
-        "<td>"+dt.avatar+ "</td>"
+        "<td >"+dt.avatar+ "</td>"
         
         +"</tr>");
        });   
@@ -61,7 +61,7 @@ xhr.onload = function(){
         "<div class='right-section'>"
                 +"<div class='first_name'>"+ dt.first_name+ "</div>"+
                 "<div>"+ dt.last_name+ "</div>"+
-                "<div>"+ dt.avatar+ "</div>"+
+                "<div class='site_link'>"+ dt.avatar+ "</div>"+
             "</div>"+
         "</div>"
             
