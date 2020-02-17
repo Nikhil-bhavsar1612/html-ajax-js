@@ -1,0 +1,63 @@
+<html>
+<head>
+    <body onload="myFunction()">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            table {
+                width: 100%;
+            }
+            th {
+                background: #f1f1f1;
+                font-weight: bold;
+                padding: 15px 5px;
+                text-align: center;
+            }
+            td {
+                background: #f9f9f9;
+                padding: 6px;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <div class="container">
+        <div class="" >
+            <table id="myTable">
+                <tr>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Avatar</th>
+                </tr>
+            </table>
+        </div>
+    </div> 
+
+    <script type="text/javascript">
+        function myFunction() {
+            $.ajax({
+                url: 'https://reqres.in/api/users?page=2',
+                method: 'get',
+                success: function(data) {
+                    let values = data.data;
+                    var len = values.length;
+                    var txt = "";
+                    if(len > 0){
+                        for(var i=0;i<len;i++){
+                                txt += "<tr><td>"+values[i].id+"</td><td>"+values[i].email+"</td><td>"+values[i].first_name+"</td><td>"+values[i].last_name+"</td><td>"+values[i].avatar+"</td></tr>";
+                        }
+                        $("#myTable").append(txt);
+                    }
+                },
+                error: function(jqXHR, textStatus, errorThrown){
+                    alert('Error: ' + textStatus + ' - ' + errorThrown);
+                }
+            });
+            return false;
+         }
+    </script>
+</body>
+</html>
